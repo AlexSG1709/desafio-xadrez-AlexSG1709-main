@@ -1,75 +1,74 @@
-# ⚠️ Importante!!!
-Você pode escolher qualquer um dos desafios para desenvolver. Sinta-se à vontade para começar pelo desafio que mais lhe interessa.
+# ♟️ Desafio de Xadrez em C
 
-# Desafio de Xadrez - MateCheck
+![Linguagem C](https://shields.io)
+![Ambiente](https://shields.io)
+![Status](https://shields.io)
 
-Bem-vindo ao desafio de Xadrez da MateCheck! Este projeto tem como objetivo testar e determinar os limites de utilização do código dentro do jogo utilizando estruturas de repetição e funções avançadas.
+## 📝 Descrição do Projeto
+Este projeto consiste no desenvolvimento de um simulador de movimentação de peças de **Xadrez**, construído em **Linguagem C** para execução direta no terminal. O principal objetivo do desafio foi aplicar estruturas de repetição e funções avançadas para determinar e validar os limites de movimentação de diferentes peças dentro do tabuleiro.
 
-## Níveis do Desafio
+O desenvolvimento foi dividido de forma incremental em três níveis de complexidade (Novato, Aventureiro e Mestre).
 
-### 🏅 Nível Novato
+---
 
-A equipe de testes da MateCheck recebeu uma solicitação para determinar os limites de utilização do código dentro do jogo. Para isso, a equipe de programação solicitou o envio de blocos de código contendo loops (estruturas de repetição) para avaliação de desempenho e possibilidades de aplicação.
+## 🎮 Níveis de Desenvolvimento e Funcionalidades
 
-**Movimentação das Peças:**
-- Bispo: 5 casas na diagonal superior direita
-- Torre: 5 casas para a direita
-- Rainha: 8 casas para a esquerda
+### 🥉 1. Nível Novato (Fundamentos de Loops)
+* **Estruturas de Repetição Básicas:** Implementação de loops simples para controlar a quantidade exata de casas percorridas pelas peças principais.
+* **Movimentação Controlada:**
+  * **Bispo:** Movimentação de 5 casas na diagonal superior direita.
+  * **Torre:** Movimentação de 5 casas para a direita.
+  * **Rainha:** Movimentação de 8 casas para a esquerda.
+* **Saída Formatada:** Exibição clara e padronizada das direções no console usando as nomenclaturas obrigatórias (ex: `Cima`, `Direita`, etc.).
 
-No jogo, apenas possuímos movimentação para quatro direções, mas o Bispo se mexe na diagonal. Com isso, foi adicionada uma condição para movimentação dessa peça, em que, para movê-lo, utilizamos o comando `printf` e, em seu valor, colocamos a direção usando a combinação de direções básicas. 
+### 🥈 2. Nível Aventureiro (Loops Aninhados)
+* **Movimentação Complexa (Cavalo):** Lógica desenvolvida para simular o movimento característico em "L" do Cavalo (movimentar para baixo e para a esquerda).
+* **Múltiplas Estruturas:** Uso obrigatório de pelo menos duas estruturas de repetição distintas na mesma lógica, combinando estruturas como `for`, `while` ou `do-while`.
+* **Loops Aninhados:** Controle do padrão de movimento em "L" através do aninhamento de loops para validar as coordenadas internas passo a passo.
 
-**Requisitos Funcionais:**
-1. **Entrada de Dados:**
-   - Os valores necessários devem ser inseridos manualmente a partir de variáveis dentro do código.
-   - Será permitido o uso de constantes para facilitar a escrita do código e evitar repetição de valores.
-2. **Estruturas de Repetição:**
-   - Os códigos precisam ser desenvolvidos utilizando estruturas de repetição.
-3. **Saída de Dados:**
-   - O sistema deve exibir os resultados de cada procedimento de forma clara e legível.
+### 🥇 3. Nível Mestre (Recursividade e Controle Avançado)
+* **Funções Recursivas:** Substituição dos loops simples por algoritmos de recursividade para gerenciar as movimentações do Bispo, Torre e Rainha.
+* **Mecânicas Avançadas do Cavalo:** Movimentação do Cavalo otimizada para realizar 1 vez o movimento em "L" (para cima e à direita) utilizando variáveis múltiplas e/ou condições de parada.
+* **Estruturas de Desvio:** Aplicação prática dos comandos de controle de fluxo `continue` e `break`.
+* **Mapeamento do Bispo:** Implementação obrigatória de funções recursivas combinadas com loops aninhados para renderizar e mover o Bispo diagonalmente.
 
-**Requisitos Não Funcionais:**
-1. **Performance:**
-   - O sistema deve executar os cálculos e apresentar os resultados sem atrasos perceptíveis.
-2. **Documentação:**
-   - O código deve ser bem documentado, incluindo comentários detalhados sobre a função de cada parte do código.
-3. **Manutenibilidade:**
-   - O código deve ser escrito de forma clara, empregando nomes de variáveis que permitam o fácil entendimento.
+---
 
-**Instruções Detalhadas:**
-1. **Entrada de Dados:**
-   - Inclua a biblioteca padrão de entrada e saída no início do seu programa.
-   - Declare variáveis constantes para definir os valores a serem comparados dentro das estruturas condicionais.
-2. **Estruturas de Repetição:**
-   - Utilize cada uma das diferentes estruturas de repetição apresentadas.
-3. **Saída:**
-   - As saídas deverão ser mostradas de forma clara e organizada, com a direção da peça.
+## 🛠️ Requisitos Técnicos Consolidados
 
-**Nomenclatura:**
+### Requisitos Funcionais
+* **Entrada Manual e Constantes:** Definição manual dos valores de movimentação no escopo usando variáveis controladas e constantes para evitar repetição de código.
+* **Nomenclatura Padronizada:** Respeito estrito às saídas textuais obrigatórias do sistema: `printf("Cima\n");`, `printf("Baixo\n");`, `printf("Esquerda\n");` e `printf("Direita\n");`.
 
-printf("Cima\n");
-printf("Baixo\n");
-printf("Esquerda\n");
-printf("Direita\n");
+### Requisitos Não-Funcionais
+* **Performance:** Cálculos e impressões em tela executados sem atrasos perceptíveis no console.
+* **Manutenibilidade e Documentação:** Código escrito com nomes de variáveis altamente legíveis e documentado com comentários detalhados explicando a lógica de cada função.
 
-### 🏅 Nível Aventureiro
-Agora que já conseguimos mover as peças mais simples usando loops, os desenvolvedores pediram para elaborar os loops de outra forma. Para o desafio, moveremos o cavalo, que possui sua movimentação em L. O cavalo deve se movimentar para baixo e para a esquerda, usando pelo menos duas estruturas de repetição: uma deve ser for e a outra pode ser while ou do-while.
+---
 
-**Movimentação do Cavalo:**
+## 🚀 Como Executar o Projeto
 
-Mover o cavalo em L utilizando loops aninhados.
-Obs: É obrigatório o uso de loops aninhados.
+Certifique-se de possuir um compilador C (como o `gcc`) devidamente configurado em sua máquina local.
 
-### 🥇 Nível Mestre
-Para o desafio final, as peças que utilizam loops simples terão seus códigos trocados por **funções recursivas**, e a movimentação do cavalo utilizará loops com variáveis múltiplas e/ou condições múltiplas, permitindo o uso de continue e break.
+1. Clone este repositório:
+```bash
+git clone https://github.com
+```
 
-**Movimentação das Peças:**
+2. Acesse a pasta do projeto:
+```bash
+cd desafio-xadrez-AlexSG1709-main
+```
 
-**Bispo**: 5 casas na diagonal direita para cima
-**Torre**: 5 casas para a direita
-**Rainha**: 8 casas para a esquerda
-**Cavalo**: 1 vez em L para cima à direita
-Obs: É obrigatório o uso de loops aninhados na movimentação do bispo e funções recursivas.
+3. Compile o código-fonte:
+```bash
+gcc xadrez.c -o xadrez
+```
 
-Ao concluir este desafio, você terá um conhecimento mais profundo de estruturas complexas e elaboradas, amplamente utilizadas no mercado de trabalho. Boa sorte e boa programação!
+4. Execute o simulador no terminal:
+```bash
+./xadrez
+```
 
-Equipe de Ensino - MateCheck
+---
+*Projeto desenvolvido como atividade acadêmica para a plataforma MateCheck.*
